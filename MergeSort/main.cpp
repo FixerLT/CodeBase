@@ -44,7 +44,7 @@ void testMergeSort(){
         randomData[i] = rand()%5000;
     vector<int> copyOfRandomData(randomData);
     sort(copyOfRandomData.begin(), copyOfRandomData.end());
-    mergeSort(randomData, [](int a, int b){return a<b;});
+    mergeSort<int>(randomData, [](int a, int b){return a<b;});
     for(int i=0; i<randomData.size(); i++){
         if(randomData[i] != copyOfRandomData[i]){
             cout<<"Merge sort:\n";
